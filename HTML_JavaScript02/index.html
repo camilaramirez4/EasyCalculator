@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Calculator</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css"> <!--Vinculamos el archivo de css-->
+    <link href="https://file.myfontastic.com/czqQzfUYcAAHSfLvUUiqVV/icons.css" rel="stylesheet"> <!--Link iconos-->
+</head>
+<body>
+    <!--header.header>.contenedor>h1.logo+span.icon-menu+nav.nav-->
+    <header class="header">
+        <div class="contenedor">
+            <h1 class="logo">Easy Calculator</h1> <!--Titulo de la pagina-->
+            <span class="icon-menu" id="btn-menu"></span> <!--Icono del menu-->
+            <nav class="nav" id="nav"> <!--El id anterior y este se utilizan para el archivo js-->
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link select" href="">Inicio</a></li> <!--Items del menu-->
+                    <li class="menu__item"><a class="menu__link" href="#calculadora">Calculadora</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--.banner>img.banner__img+.contenedor>.h2.banner__titulo+p.banner__txt-->
+    <div class="banner">
+        <img src="img/banner.jpg" alt="" class="banner__img">
+        <div class="contenedor">
+            <div class="h2 banner__titulo">CALCULADORA ONLINE</div>
+            <p class="banner__txt">Calculadora de operaciones basicas online. Gracias por usar nuestros servicios</p>
+        </div>
+    </div>
+    <main class="main">
+        <div class="contenedor">
+            <!--section.info>article.info__columna*2>img.info__img[src="img/img1.jpg"]+h2.info__titulo+p.info__txt-->
+            <section class="info">
+                <article class="info__columna">
+                    <a name="calculadora"><h2 class="info__titulo">CALCULADORA</h2></a>
+                    <p class="info__txt">Ingrese los dos numeros que quiere operar y posteriormente oprima el boton con la operacion correspondiente</p>
+                    <form name="N" class="form">
+                        <p class="form-texto">Ingrese el valor del primer numero: <input class="form-box" type="number" name="n1" id="n1"></p>
+                        <p class="form-texto">Ingrese el valor del segundo numero: <input class="form-box" type="number" name="n2" id="n2"></p>
+                        <div class="buttons">
+                            <p><input class="btn-suma" name="btn-suma" type="button" value="Sumar" onclick ="suma()"></p>
+                            <p><input class="btn-resta" name="btn-resta" type="button" value="Restar" onclick="resta()"></p>
+                            <p><input class="btn-multi" name="btn-multi" type="button" value="Multiplicar" onclick="multi()"></p>
+                            <p><input class="btn-div" name="btn-div" type="button" value="Dividir" onclick="div()"></p>
+                        </div>
+                        <p class="form-texto">Resultado: <input class="resultado" name="resultado" id="resultado"></input> </p>
+                        <div class="buttons">
+                            <p><input class="btn-limpiar" name="btn-limpiar" type="reset" value="Limpiar"></p>
+                        </div>
+                    </form>
+                </article>
+            </section>
+        </div>
+    </main>
+    <script src="js/menu.js" >
+    </script> <!--Vinculamos el archivo de JavaScript-->
+</body>
+</html>
